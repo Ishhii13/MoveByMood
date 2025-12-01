@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(247, 246, 252);
+  color: rgb(70, 71, 81);
+  font-family: 'Open Sans', sans-serif;
+
+  display: grid;
+  grid-template-rows: auto 1fr;   /* header takes auto height, rest fills */
+  grid-template-columns: 20% 80%; /* sidebar 20%, main 80% */
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+  height: 100vh; /* full height viewport */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* remove scrollbar */
+}
+
+/* ---------- HEADER ---------- */
+.header {
+  grid-area: header;
+  font-family: 'Lilita One', sans-serif;
+  background: rgb(90, 148, 214);
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+}
+
+.words-logo {
+  height: 65px;
+  width: auto;
+}
+
+/* ---------- SIDEBAR ---------- */
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  grid-area: sidebar;
+  background: gray;
+  padding: 1rem;
+  box-sizing: border-box; /* so padding doesn’t increase height */
+}
+
+.profile-pic {
+    height: 150px;
+    width: auto;
+    border-radius: 50%; /* circle img */
+
+    /* horizontal align image to the center */
+    /* ty w3schools */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.username {
+    padding: 1rem;
+    text-align: center;
+}
+
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  list-style: none; /* no dots */
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.sidebar-list button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin: 6px 0;
+  font-size: 1.2rem;
+  color: gray;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s; /* transition time for the hover color */
+}
+
+/* change this later idk what colors to use yet */
+.sidebar-list button:hover {
+  background-color: darkgrey;
+}
+
+/* settings placed at the bottom */
+.sidebar-list .settings {
+  margin-top: auto;
+}
+
+/* ---------- MAIN CONTENT ---------- */
+main {
+  grid-area: main;
+  overflow-y: auto; /* scroll main content if it’s too tall */
+}
+
+.main-container {
+  grid-area: main;
+  background: white;
+  padding: 1rem;
+}
+
+.btn-workout {
+  display: block;         /* makes it behave like a block element */
+  width: 100%;            /* span full width of container */
+  height: 28%;          /* bigger clickable area */
+  font-size: 1.2rem;      /* larger text */
+  background-color: #4CAF50; /* green background */
+  color: white;           /* white text */
+  border: none;           /* remove default border */
+  border-radius: 8px;     /* rounded corners */
+  cursor: pointer;        /* pointer cursor on hover */
+}
+
+.btn-workout:hover {
+  background-color: #45a049; /* darker on hover */
+}
+
+/* ---------- CHART STUFF ---------- */
+.charts {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.chart-container {
+  flex: 1 1 45%; /* allows two charts side-by-side */
+  max-width: 400px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.chart-container h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Lilita One', cursive;
+  color: #333;
+  font-size: 18px;
+}
+
+canvas {
+  width: 100% !important;
+  height: 300px !important;
+}

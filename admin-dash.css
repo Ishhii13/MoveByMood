@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(247, 246, 252);
+    color: rgb(70, 71, 81);
+    font-family: 'Open Sans', sans-serif;
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 20% 80%;
+    grid-template-areas:
+        "header header"
+        "sidebar main";
+    height: 100vh;
+}
+
+html, body {
+    overflow: hidden;
+}
+
+/* HEADER */
+.header {
+    grid-area: header;
+    background: rgb(90, 148, 214);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    height: 80px;
+}
+
+.words-logo {
+    height: 65px;
+}
+
+/* SIDEBAR */
+#sidebar {
+    grid-area: sidebar;
+    background: gray;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-pic {
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+.username {
+    text-align: center;
+    padding: 1rem;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.sidebar-list button {
+    width: 100%;
+    padding: 16px;
+    margin: 6px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background: white;
+}
+
+.sidebar-list button:hover {
+    background: darkgrey;
+}
+
+/* MAIN */
+.main-container {
+    grid-area: main;
+    overflow-y: auto;
+    padding: 1rem;
+    background: white;
+}
+
+.section-title {
+    font-family: 'Lilita One';
+    font-size: 26px;
+    margin-top: 20px;
+}
+
+.table-section {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead {
+    background: rgb(90, 148, 214);
+    color: white;
+}
+
+thead th {
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background: #f4f4f4;
+}
+
+td {
+    padding: 10px;
+}
+
+/* STATUS BADGES */
+.active {
+    color: green;
+    font-weight: bold;
+}
+
+.inactive {
+    color: red;
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.btn.deactivate {
+    background: red;
+}
+
+.btn.activate {
+    background: green;
+}

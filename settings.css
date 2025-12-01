@@ -1,0 +1,141 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Header */
+
+
+/* Main container */
+.settings-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.settings-section {
+  margin-bottom: 30px;
+}
+
+.settings-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #4CAF50;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 5px;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 1rem;
+}
+
+/* Switch toggle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 26px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; width: 20px;
+  left: 3px; bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Font size slider */
+.font-slider {
+  width: 150px;
+}
+
+/* Hover effects */
+.setting-item:hover {
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  transition: 0.3s;
+  padding: 5px 10px;
+}
+
+/* Font size preview beside the slider */
+.font-size-setting {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.font-size-setting label {
+  flex: 1;
+}
+
+.font-size-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.font-label {
+  color: #fff;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.font-label.small {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.font-label.large {
+  font-size: 22px;
+  opacity: 0.8;
+}
+
+/* Range slider */
+.font-slider {
+  width: 150px;
+}
+
+.font-preview {
+  font-weight: bold;
+  color: black;
+  font-size: 16px; /* default */
+  font-family: Arial, sans-serif;
+}
