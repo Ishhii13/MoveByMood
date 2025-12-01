@@ -31,7 +31,7 @@
 
     h2 { text-align:center; margin-top:0; }
 
-    input { width:100%; padding:10px; margin:8px 0; border-radius:6px; border:1px solid #ccc; font-size:16px; }
+    input { width:95%; padding:10px; margin:8px 0; border-radius:6px; border:1px solid #ccc; font-size:16px; }
     button { width:100%; padding:12px; border-radius:8px; border:none; font-size:16px; cursor:pointer; background:#4a90e2; color:#fff; }
     button.secondary { background:#fff; color:#4a90e2; border:1px solid #4a90e2; margin-top:8px; }
 
@@ -76,9 +76,6 @@
   </div>
 
   <script>
-  // ------------------------------
-  // CLASS: AuthService
-  // ------------------------------
   class AuthService {
     constructor(baseURL = 'api/') {
       this.baseURL = baseURL;
@@ -103,9 +100,6 @@
     }
   }
 
-  // ------------------------------
-  // CLASS: LoginForm
-  // ------------------------------
   class LoginForm {
     constructor(formId, authService) {
       this.form = document.getElementById(formId);
@@ -138,9 +132,6 @@
 }
   }
 
-  // ------------------------------
-  // CLASS: SignupModal
-  // ------------------------------
   class SignupModal {
     constructor(backdropId, formId, authService) {
       this.backdrop = document.getElementById(backdropId);
@@ -189,9 +180,6 @@
     }
   }
 
-  // ------------------------------
-  // CLASS: UIController
-  // ------------------------------
   class UIController {
     constructor() {
       this.authService = new AuthService();
@@ -200,7 +188,7 @@
     }
 
     init() {
-      // Additional UI setup can go here if needed
+      
     }
   }
 
